@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,300,500,700');
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,700');
+body{ /*tar bort all default margin & padding på alla sidor*/
+	padding: 0;
+	margin: 0;
+}
+h1, h2, table, th, nav{ /*sätter speifik font/-weight på h1, h2, table, th och nav taggar i html samt letter spacing*/
+    letter-spacing: 0.0625em;
+    font-family: 'Oswald';
+    font-weight: 400;
+}
+p, td, article li, form, textarea, input, button{ /*sätter speifik font/-weight på p, td, article, textarea, input, button och li taggar samt letter spacing */
+    letter-spacing: normal;
+    font-family: 'Roboto';
+    font-weight: 400;
+}
+/*Navigationbar css*/
+.cssmenu{
+	position: relative;
+}
+.cssmenu img{ /*nerskalar bild till bred av 16*4px och höjd blir auto*/
+	width: 4rem;
+}
+.cssmenu ul li { /*lägger listan av nav länkar vertikalt i mitten samt visar dem som block*/
+    display: inline-block;
+    vertical-align: middle;
+}
+.borderclass { /*lägger en rad mellan varje nav länk för avskillnad. selektorn är lagd på näst först till sista*/
+    border-left: solid 0.0625em rgba(91,178,162, 0.3);
+}
+.navlink { /*style på navlänkknapparna*/
+    color: rgb(109,200,184);
+    text-decoration: none;
+    padding: 1.25em 0.9375em;
+    text-transform: uppercase;
+    font-size: 1em;
+    -webkit-transition: color .225s;
+    -moz-transition: color .225s;
+    -ms-transition: color .225s;
+    -o-transition: color .225s;
+    transition: color .225s;
+}
+.navlink:hover{ /*hover funktion för navknappar då de ändrar färg*/
+	color: rgb(230,95,104);
+}
+.navbar { /*style för hela nav containern*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    min-width: 46.875em;
+    background-color: #e6e6e6;
+}
+/*Container css*/
+.container{ /*position av section container*/
+    display: flex;
+    width: 75%;
+    height: 100% auto 0;
+    margin:0 auto 0;
+    flex-wrap: wrap;
+}
+.flex-container{ /*position av section container*/
+    background-color:#7DC1B1;
+    display: flex;
+    height: 100%;
+    width: 75%;
+    margin: 7em auto 0;
+    padding-bottom: 5em;
+    
+    flex-wrap: wrap;
+}
+.flex-tablecontainer{ /*position av section container*/
+    background-color:#7DC1B1;
+	display: flex;
+    height: 100%;
+	width: 75%;
+	margin: 7em auto 0;
+	
+    flex-wrap: wrap;
+}
+.flex-item{ /*position av item div*/
+	display: flex;
+    margin: 0;
+
+    flex-wrap: wrap;
+}
+figure{ /*position över img taggar*/
+    overflow: hidden;
+    justify-content: center;
+    margin: 0;
+}
+header h1{ /*position av header*/
+    margin-left: 5%;
+}
+header p{ /*position av paragrafer*/
+    text-align: justify;
+    margin:0 50% 0 3%;
+}
+
+/*talbe*/
+
+table { /*position av table på pricing och theme sidan*/
+    margin: 0 auto;
+    border-collapse: collapse;
+    text-transform: uppercase;
+}
+td, th{ /*style på tabledata och tableheader*/
+    color: black;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 0.5em;
+}
+th{ /*specifikt på table header*/
+    background: rgb(109,200,184);
+}
+.themes tr:nth-child(even){background-color: #e6e6e6} /*färger på table even och odd*/
+.themes tr:nth-child(odd){background-color: white}
+.pricing tr:nth-child(even){background-color: #e6e6e6}
+.pricing tr:nth-child(odd){background-color: white}
+.themes td{ /*tar bort uppercase*/
+    text-transform: none;
+}
+table, th, td { /*gör border rung alla items i tablel*/
+    border-left: 0.0625em solid lightgray;
+    border-right: 0.0625em solid lightgray;
+    border-bottom: 0.0625em solid lightgray;
+}
+
+/*about us*/
+article h1{ /*position av h1 på article*/
+    margin-left: 5%;
+}
+article p{ /*position av p i article*/
+    padding-top: 1em;
+    text-align: justify;
+    margin:0 50% 0 3%;
+}
+
+/*contact*/
+article h2{ /*position av h2 på article*/
+    margin-left: 5%;
+}
+form{ /*position av form på contact sidan*/
+    margin-left: 5%;
+}
+article li{ /*position av article listan*/
+    margin-top: 1em;
+}
+
+/*Text style för input box med attributen text*/
+input[type="text"] { 
+  margin: 0;
+  font-size: 1.125em;
+  line-height: 1.125em;
+  height: 1.125em;
+  padding: 0.625em;
+  border: 0.0625em solid #ddd;
+  background: #fff;
+  border-radius: 6px;
+  color: #888;
+}
+/*Text style för textarea*/
+textarea { 
+  margin: 0;
+  font-size: 1.125em;
+  line-height: 1.125em;
+  height: 4em;
+  padding: 0.625em;
+  border: 0.0625em solid #ddd;
+  background: #fff;
+  border-radius: 0.375em;
+  color: #888;
+}
+/*button style för knapp box*/
+button {
+  background: rgb(230,95,104);
+  border: 0;
+  border-radius: 0.375em;
+  font-size: 0.9375em;
+  cursor: pointer;
+}
+/*röda rgb(230,95,104) grön1 rgb(109,200,184) grön2 rgb(98,193,175) grön3 rgb(91,178,162)*/
