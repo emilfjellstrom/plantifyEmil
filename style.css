@@ -1,34 +1,37 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,300,500,700');
 @import url('https://fonts.googleapis.com/css?family=Oswald:300,400,700');
-body{ /*tar bort all default margin & padding på alla sidor*/
+
+/*inline styles, IDs, Classes/attributes/pseudo-classes, Elements and pseudo-elements*/
+
+body{ /*tar bort all default margin & padding på alla sidor*/ /*0,0,0,1*/
 	padding: 0;
 	margin: 0;
 }
 h1, h2, table, th, nav{ /*sätter speifik font/-weight på h1, h2, table, th och nav taggar i html samt letter spacing*/
-    letter-spacing: 0.0625em;
+    letter-spacing: 0.0625em; /*0,0,0,5*/
     font-family: 'Oswald';
     font-weight: 400;
 }
 p, td, article li, form, textarea, input, button{ /*sätter speifik font/-weight på p, td, article, textarea, input, button och li taggar samt letter spacing */
-    letter-spacing: normal;
+    letter-spacing: normal; /*0,0,0,7*/
     font-family: 'Roboto';
     font-weight: 400;
 }
 /*Navigationbar css*/
-.cssmenu{
+.cssmenu{ /*0,0,1,0*/
 	position: relative;
 }
 .cssmenu img{ /*nerskalar bild till bred av 16*4px och höjd blir auto*/
-	width: 4rem;
+	width: 4rem; /*0,0,1,1*/
 }
 .cssmenu ul li { /*lägger listan av nav länkar vertikalt i mitten samt visar dem som block*/
-    display: inline-block;
+    display: inline-block; /*0,0,1,2*/
     vertical-align: middle;
 }
 .borderclass { /*lägger en rad mellan varje nav länk för avskillnad. selektorn är lagd på näst först till sista*/
-    border-left: solid 0.0625em rgba(91,178,162, 0.3);
+    border-left: solid 0.0625em rgba(91,178,162, 0.3); /*0,0,1,0*/
 }
-.navlink { /*style på navlänkknapparna*/
+.navlink { /*style på navlänkknapparna*/ /*0,0,1,0*/
     color: rgb(109,200,184);
     text-decoration: none;
     padding: 1.25em 0.9375em;
@@ -40,10 +43,10 @@ p, td, article li, form, textarea, input, button{ /*sätter speifik font/-weight
     -o-transition: color .225s;
     transition: color .225s;
 }
-.navlink:hover{ /*hover funktion för navknappar då de ändrar färg*/
+.navlink:hover{ /*hover funktion för navknappar då de ändrar färg*/ /*0,0,2,0*/
 	color: rgb(230,95,104);
 }
-.navbar { /*style för hela nav containern*/
+.navbar { /*style för hela nav containern*/ /*0,0,1,0*/
     position: fixed;
     top: 0;
     left: 0;
@@ -53,14 +56,14 @@ p, td, article li, form, textarea, input, button{ /*sätter speifik font/-weight
     background-color: #e6e6e6;
 }
 /*Container css*/
-.container{ /*position av section container*/
+.container{ /*position av section container*/ /*0,0,1,0*/
     display: flex;
     width: 75%;
     height: 100% auto 0;
     margin:0 auto 0;
     flex-wrap: wrap;
 }
-.flex-container{ /*position av section container*/
+.flex-container{ /*position av section container*/ /*0,0,1,0*/
     background-color:#7DC1B1;
     display: flex;
     height: 100%;
@@ -70,7 +73,7 @@ p, td, article li, form, textarea, input, button{ /*sätter speifik font/-weight
     
     flex-wrap: wrap;
 }
-.flex-tablecontainer{ /*position av section container*/
+.flex-tablecontainer{ /*position av section container*/ /*0,0,1,0*/
     background-color:#7DC1B1;
 	display: flex;
     height: 100%;
@@ -79,77 +82,77 @@ p, td, article li, form, textarea, input, button{ /*sätter speifik font/-weight
 	
     flex-wrap: wrap;
 }
-.flex-item{ /*position av item div*/
+.flex-item{ /*position av item div*/ /*0,0,1,0*/
 	display: flex;
     margin: 0;
 
     flex-wrap: wrap;
 }
-figure{ /*position över img taggar*/
+figure{ /*position över img taggar*/ /*0,0,0,1*/
     overflow: hidden;
     justify-content: center;
     margin: 0;
 }
-header h1{ /*position av header*/
+header h1{ /*position av header*/ /*0,0,0,1*/
     margin-left: 5%;
 }
-header p{ /*position av paragrafer*/
+header p{ /*position av paragrafer*/ /*0,0,0,1*/
     text-align: justify;
     margin:0 50% 0 3%;
 }
 
 /*talbe*/
 
-table { /*position av table på pricing och theme sidan*/
+table { /*position av table på pricing och theme sidan*/ /*0,0,0,1*/
     margin: 0 auto;
     border-collapse: collapse;
     text-transform: uppercase;
 }
-td, th{ /*style på tabledata och tableheader*/
+td, th{ /*style på tabledata och tableheader*/ /*0,0,0,2*/
     color: black;
     text-transform: uppercase;
     text-align: left;
     padding: 0.5em;
 }
-th{ /*specifikt på table header*/
+th{ /*specifikt på table header*/ /*0,0,0,1*/
     background: rgb(109,200,184);
 }
-.themes tr:nth-child(even){background-color: #e6e6e6} /*färger på table even och odd*/
-.themes tr:nth-child(odd){background-color: white}
-.pricing tr:nth-child(even){background-color: #e6e6e6}
-.pricing tr:nth-child(odd){background-color: white}
+.themes tr:nth-child(even){background-color: #e6e6e6} /*0,0,2,1*/ /*färger på table even och odd*/
+.themes tr:nth-child(odd){background-color: white} /*0,0,2,1*/
+.pricing tr:nth-child(even){background-color: #e6e6e6} /*0,0,2,1*/
+.pricing tr:nth-child(odd){background-color: white} /*0,0,2,1*/
 .themes td{ /*tar bort uppercase*/
     text-transform: none;
 }
-table, th, td { /*gör border rung alla items i tablel*/
+table, th, td { /*gör border rung alla items i tablel*/ /*0,0,0,3*/
     border-left: 0.0625em solid lightgray;
     border-right: 0.0625em solid lightgray;
     border-bottom: 0.0625em solid lightgray;
 }
 
 /*about us*/
-article h1{ /*position av h1 på article*/
+article h1{ /*0,0,0,1*/ /*position av h1 på article*/
     margin-left: 5%;
 }
-article p{ /*position av p i article*/
+article p{ /*0,0,0,1*/ /*position av p i article*/
     padding-top: 1em;
     text-align: justify;
     margin:0 50% 0 3%;
 }
 
 /*contact*/
-article h2{ /*position av h2 på article*/
+article h2{ /*0,0,0,1*/ /*position av h2 på article*/
     margin-left: 5%;
 }
-form{ /*position av form på contact sidan*/
+form{ /*0,0,0,1*/ /*position av form på contact sidan*/
     margin-left: 5%;
 }
-article li{ /*position av article listan*/
+article li{ /*0,0,0,1*/ /*position av article listan*/
     margin-top: 1em;
 }
 
 /*Text style för input box med attributen text*/
-input[type="text"] { 
+input[type="text"] { /*0,0,1,1*/
   margin: 0;
   font-size: 1.125em;
   line-height: 1.125em;
@@ -161,7 +164,7 @@ input[type="text"] {
   color: #888;
 }
 /*Text style för textarea*/
-textarea { 
+textarea { /*0,0,0,1*/
   margin: 0;
   font-size: 1.125em;
   line-height: 1.125em;
@@ -173,7 +176,7 @@ textarea {
   color: #888;
 }
 /*button style för knapp box*/
-button {
+button { /*0,0,0,1*/
   background: rgb(230,95,104);
   border: 0;
   border-radius: 0.375em;
